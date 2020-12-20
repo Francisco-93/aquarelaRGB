@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function vermelho(){
+            document.getElementById("div").style.backgroundColor = "red";
+        }
+        function verde(){
+            document.getElementById("div").style.backgroundColor = "green";
+        }
+        function azul(){
+            document.getElementById("div").style.backgroundColor = "blue";
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <button onclick="vermelho()">Vermelho</button>
+    <button onclick="verde()">Verde</button>
+    <button onclick="azul()">Azul</button>
+    <br>
+    <br>
+    <div id="div" style="width: 200px; height: 200px; border: 1px solid black;">
+    </div>
+    
+</body>
+</html>
