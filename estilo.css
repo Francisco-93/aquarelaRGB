@@ -1,0 +1,44 @@
+body{
+    background: url('aquarela.jpg');
+    background-size: cover;
+}
+
+#geral{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    text-align: center;
+}
+
+.rang{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 300px;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.rang::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#red{
+    background-image: linear-gradient(to right, black, red);
+}
+#green{
+    background-image: linear-gradient(to right, black, green);
+}
+#blue{
+    background-image: linear-gradient(to right, black, blue);
+}

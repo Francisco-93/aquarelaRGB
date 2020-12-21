@@ -4,131 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RGB - Select</title>
-    <style>
-
-        body{
-            background: url('aquarela.jpg');
-            background-size: cover;
-        }
-
-        #geral{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .box{
-            text-align: center;
-        }
-
-        .rang{
-            -webkit-appearance: none;
-            appearance: none;
-            height: 15px;
-            width: 300px;
-            margin: 50px;
-            border-radius: 10px;
-        }
-
-        .rang::-webkit-slider-thumb{
-            -webkit-appearance: none;
-            appearance: none;
-            width: 30px;
-            height: 30px;
-            background-color: black;
-            border-radius: 50%;
-            opacity: 0.5;
-            cursor: pointer;
-        }
-
-        #red{
-            background-image: linear-gradient(to right, black, red);
-        }
-        #green{
-            background-image: linear-gradient(to right, black, green);
-        }
-        #blue{
-            background-image: linear-gradient(to right, black, blue);
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 
 </head>
 <body>
 
-    <div id="tela" style="height: 400px; width: 400px; border: 1px solid black; border-radius: 50%; margin: 150px auto;"></div>
+    <div id="tela" style="height: 400px; width: 400px; border-radius: 50%; margin: 150px auto;"></div>
     <div id="geral">
         <div class="box">
             <h3>RED</h3>
-            <input onmouseup="rValue()" type="range" min="0" max="255" id="red" class="rang"><br>
+            <input type="range" min="0" max="255" id="red" class="rang"><br>
             <span id="valueRed"></span>
         </div>
         <div class="box">
             <h3>GREEN</h3>
-            <input onmouseup="gValue()" type="range" min="0" max="255" id="green" class="rang"><br>
+            <input type="range" min="0" max="255" id="green" class="rang"><br>
             <span id="valueGreen"></span>
         </div>
         <div class="box">
             <h3>BLUE</h3>
-            <input onmouseup="bValue()" type="range" min="0" max="255" id="blue" class="rang"><br>
+            <input type="range" min="0" max="255" id="blue" class="rang"><br>
             <span id="valueBlue"></span>
         </div>
     </div>
-
-    <script>
-        var red = document.getElementById("red");
-        var green = document.getElementById("green");
-        var blue = document.getElementById("blue");
-
-        var outputR = document.getElementById("valueRed");
-        outputR.innerHTML = red.value;
-        var outputG = document.getElementById("valueGreen");
-        outputG.innerHTML = green.value;
-        var outputB = document.getElementById("valueBlue");
-        outputB.innerHTML = blue.value;
-
-        red.oninput = function(){
-            outputR.innerHTML = this.value;
-        }
-
-        green.oninput = function(){
-            outputG.innerHTML = this.value;
-        }
-
-        blue.oninput = function(){
-            outputB.innerHTML = this.value;
-        }
-
-        var r = 128;
-        var g = 128;
-        var b = 128;
-        var rgb = "rgb("+ r +","+ g +","+ b +")";
-        document.getElementById("tela").style.backgroundColor = rgb;
-
-        
-        function rValue(){
-            console.log(document.getElementById("valueRed").innerHTML);
-            r = document.getElementById("valueRed").innerHTML;
-            var rgb = "rgb("+ r +","+ g +","+ b +")";
-            document.getElementById("tela").style.backgroundColor = rgb;
-        }
-        function gValue(){
-            console.log(document.getElementById("valueGreen").innerHTML);
-            g = document.getElementById("valueGreen").innerHTML;
-            var rgb = "rgb("+ r +","+ g +","+ b +")";
-            document.getElementById("tela").style.backgroundColor = rgb;
-        }
-        function bValue(){
-            console.log(document.getElementById("valueBlue").innerHTML);
-            b = document.getElementById("valueBlue").innerHTML;
-            var rgb = "rgb("+ r +","+ g +","+ b +")";
-            document.getElementById("tela").style.backgroundColor = rgb;
-        }
-
-        console.log(r)
-        
-        
-    </script>
-
-
+    <script src="prog.js"></script>
 </body>
 </html>
